@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   resources :carts do
     member do
       delete :delete_all_cart_items
+      post :checkout
     end
   end
 
