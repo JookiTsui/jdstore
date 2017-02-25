@@ -52,6 +52,14 @@ class OrdersController < ApplicationController
     @order.destroy
   end
 
+  def apply_to_cancel
+    @order = Order.find(params[:id])
+    OrderMailer.apply_cancel(@order).deliver!
+    flash[:notice] = "已提交申请"
+    redirect_to :back
+  end
+
+  
   private
 
   def order_params
