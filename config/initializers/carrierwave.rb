@@ -6,7 +6,7 @@ CarrierWave.configure do |config|
   config.qiniu_bucket_domain   = ENV["qiniu_bucket_domain"]
   config.qiniu_block_size      = 4*1024*1024
   config.qiniu_protocol        = "http"
-  coinfg.qiniu_up_host         = "http://up.qiniu.com" #选择不同的区域时，“up.qiniu.com”不同
+  config.qiniu_up_host         = "http://up.qiniug.com" #选择不同的区域时，“up.qiniu.com”不同
 
 
 end
